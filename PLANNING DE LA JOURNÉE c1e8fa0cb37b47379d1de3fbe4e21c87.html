@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PLANNING DE LA JOURNÉE </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c1e8fa0c-b37b-4737-9d1d-e3fbe4e21c87" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1650735310415-392ab5378954?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 82.23%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✅</span></div><h1 class="page-title">PLANNING DE LA JOURNÉE </h1><p class="page-description"></p></header><div class="page-body"><blockquote id="2cf34949-6cd0-4b36-ab4d-1d9cdf5bf5fa" class=""><em>Ici vous tu vas faire le planning de ta journée. Ce que tu as à faire et où tu dois te rendre et en fin de journée cocher les activités accomplies.</em></blockquote><p id="c02495c6-69d5-4767-b10e-bf3d8352b299" class="">💡<em><mark class="highlight-teal"><strong>Je te conseille de toujours faire ton planning à la veille cela te permettra de gagner en temps et d’être plus productif:</strong></mark></em></p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">LUNDI</summary><div class="indented"><div id="0c440c7e-9135-4013-bb5f-236bcb839455" class="column-list"><div id="08daf695-3ac6-4490-8dc3-bca60b9cba60" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="e4a3cfd1-bfed-4b1e-9845-54bd53de423e"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="a44c91aa-0342-4dc0-85e3-abdfcbc7cc00" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="0635ce87-f029-4dc0-a991-3e8f61082f7a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="d0f977ee-8169-4328-bff4-40ac55510b71" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="0c4c8c86-b230-4a4e-a719-6acd89fa13a4" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="1043d1f5-e0fa-48de-8628-7063d727c157"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="c42c6fcc-1dca-447d-882a-dfd604b8fdd8" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="a784189f-5de5-48e4-ab1c-6fd38bf00787" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="e6399ad3-e6a9-4739-8100-448b98e8cab0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="dfa76b84-a83b-4a09-8ca3-555b7bce5570" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="3f6029ec-b229-4595-84f1-65f66dd3da19"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="c0e3591e-82b8-47ee-bef9-d6779b455dde" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="bae47083-857f-451b-a2f5-cb760e749ee7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="aa26009f-6d33-4c0e-9123-ccd792ff9e09" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div></div></div></details><hr id="a999c096-171a-4dfc-b48e-698990af4558"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">MARDI</summary><div class="indented"><div id="7d71bd48-cffb-4f91-a6a4-cf04db0fb3a4" class="column-list"><div id="bc5dd740-392a-4e84-96b9-356dd5537c57" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="0fd5f997-73e6-4e7a-8ede-ed1d55ac4485"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="95727db4-8358-47c6-af37-4b3de6748503" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="3e626c22-7d3f-41e8-b8b2-bf838d09b101" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="cf6a4806-30c9-4184-aa96-b358c82d0905" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="38394111-404a-4c59-a7f0-9d9cf42232f9" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="63034bed-8ffd-4d3c-81d0-a3ef96b61cfa"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="479d4491-9474-4306-a810-afe23d1ae9a7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="0fd3a336-0ed2-4d54-870a-48dd031d6e8c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="d075085f-2827-45d9-9eb2-4d6f3774da66" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="0b0c5194-ba41-47d8-ae8d-33a6e409abc0" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="292e92a1-d7d1-48d9-a8f3-a08fd36a8b89"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="41117856-48e0-41b6-a67d-5be5170dd968" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="cb93af9c-d39c-496b-a859-513bd1284125" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="e45c8d3d-239f-4c7f-8734-8d94bc69865f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div></div></div></details><hr id="57810e23-27f3-4265-aef0-c9f8697fac01"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">MERCREDI</summary><div class="indented"><div id="1aa9dcd4-3c89-4069-8cfa-219166cda6aa" class="column-list"><div id="813304ff-5615-4e55-9f2d-c2ab449cb9e5" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="b93d7755-b707-4390-a2d6-e3c4f7c2526c"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="0e504674-fbe4-4805-a5c4-4b39553ee81a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Prier 🙏🏻 avec prière inspiré </span><div class="indented"></div></li></ul><ul id="c3bfc1a8-5406-4757-9a8d-dd147988b069" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Méditer </span><div class="indented"></div></li></ul><ul id="8744dbce-f0c9-4262-8a6d-f6ccde0db75e" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Aller au cours</span><div class="indented"></div></li></ul></div><div id="79f4df8a-12db-4169-acd6-e8a89cb44e23" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="d8b3f92b-95eb-4214-8f83-5aa40062b205"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="d137f924-6d8f-4920-a2f9-29e045d3341b" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Aller au marché </span><div class="indented"></div></li></ul><ul id="4f449343-15c8-485d-90cc-d65bcec6acd2" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Filmer la vidéo sur les femmes et la monter</span><div class="indented"></div></li></ul><ul id="6dd3a7e8-0827-4dab-874c-aa890d7c3d66" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Prendre un temps pour prier</span><div class="indented"></div></li></ul></div><div id="608635e1-399a-497f-b493-12bf88ec04ea" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="db2d9a7e-cd52-4ad9-89e2-64b43c5267fe"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="14912432-661a-4f9c-8530-03720fc034b4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Faire le planning avec Obed et méditer sur Romains</span><div class="indented"></div></li></ul><ul id="8ce6c87e-549d-4661-bffd-bbfd099b748b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Préparer la journée de jeudi </span><div class="indented"></div></li></ul><ul id="fb0666c3-7bd3-44a4-9264-04aaed658593" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Suivre une prédication et prier</span><div class="indented"></div></li></ul></div></div></div></details><hr id="b7cc9b6b-4c51-4e3f-aed7-21f3c3d6b2af"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">JEUDI</summary><div class="indented"><div id="46e3dcb6-2720-40c9-b8e8-d395b5a2f127" class="column-list"><div id="16616bf4-f1b0-4151-9fd3-a18294efb822" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="062f8b34-d58c-49e9-ba9f-a4416ad8371d"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="157d30d6-f3d7-48ff-a0c0-e26873f48836" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Prier</span><div class="indented"></div></li></ul><ul id="cff7a9b5-0840-4c1b-9d7c-b7e025ed4249" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Écouter un podcast</span><div class="indented"></div></li></ul><ul id="fd60962d-2573-4dcb-8c51-4a06ab438e8d" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Aller au cours</span><div class="indented"></div></li></ul></div><div id="a5c73a20-fe69-4f87-9ea3-b749c817d115" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="3c57e1b1-4d94-47e5-b76e-3b1dc642a406"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="9a7d307e-1720-497f-afcb-1cf68be8f540" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Cours</span><div class="indented"></div></li></ul><ul id="8cf823d6-313c-40c1-bf60-0cf1dd6f2339" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Repos</span><div class="indented"></div></li></ul><ul id="f8a0a1d8-8351-4281-80a1-7f4a03aee2b6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"></span><div class="indented"></div></li></ul></div><div id="3d05e728-9660-4a1f-b518-318b395790e5" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="ee399471-aebc-4221-857b-585daf817e21"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="de4d8e6e-0360-4ae6-a14d-7b397278fbed" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Aller au culte</span><div class="indented"></div></li></ul><ul id="65929e5d-ee65-4fd6-ae66-b06247ec1389" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Cuisiner</span><div class="indented"></div></li></ul><ul id="1e6a709c-cea9-4d94-b3c6-3e2d2f476e78" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Causer avec Obed avant de dormir </span><div class="indented"></div></li></ul></div></div></div></details><hr id="4124819f-606b-4309-a55f-920ddf29c6b4"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">VENDREDI</summary><div class="indented"><div id="e0ff9190-64e2-4325-840f-37d0753575f6" class="column-list"><div id="0045a984-2033-4973-a5c5-56acb35b3705" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="cc988a6a-8261-44ed-8a3d-4c49cfe3f2e2"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="9c27519d-4105-4c81-86a5-d0d18c023baf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Prier avec Obed</span><div class="indented"></div></li></ul><ul id="af2face0-cd9c-46c9-95bd-78a0c9469f8e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Méditer </span><div class="indented"></div></li></ul><ul id="0e88d8dd-3fca-49d8-b07b-de025fd367f5" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Repos</span><div class="indented"></div></li></ul></div><div id="2ecf13da-8825-44c9-9c69-30b62d8645fc" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="3d2206fb-7c79-4e04-9046-67ee6b893f6c"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="f1aff28e-a11c-4296-82a5-601dc8133a89" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Manger et faire le ménage 🧹 </span><div class="indented"></div></li></ul><ul id="83477275-574b-447b-9fd4-f81292f362a6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Préparer l’exhortation du dimanche </span><div class="indented"></div></li></ul><ul id="4c7eabaa-0933-4483-ac60-e3999081d547" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Aller à la prière avec la chorale </span><div class="indented"></div></li></ul></div><div id="04518612-c292-4d68-a6f8-d9c8ed0ce66e" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="b4778c6c-9606-4ff1-9dc7-b06f0605cfe7"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="e8b2e95d-3e9b-4a0c-b282-f584b0cefb1d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Filmer et faire un montage</span><div class="indented"></div></li></ul><ul id="a4923ef6-78db-4774-a5c8-15afa1ede3db" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Écouter un podcast </span><div class="indented"></div></li></ul><ul id="24684900-eafc-4810-9dff-f8172912729a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Discuter avec Obed</span><div class="indented"></div></li></ul></div></div></div></details><hr id="187b6ea0-186b-4210-8cf6-aa8beac197de"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">SAMEDI</summary><div class="indented"><div id="e189181c-0286-4799-b669-5842e55c8cfc" class="column-list"><div id="82a12b6b-e2a1-4a03-94f3-f00c221ffb39" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="745e98e3-aab0-4bb9-8a3f-564980e878d1"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="2d8c3a68-84de-49c1-951c-32c0fd0c86df" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="83f2bdb3-8d48-4c5d-8583-3134107c9ffa" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="dab7df34-d844-4f22-8930-e505e4f97989" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="f6f5b4d6-bf40-42d4-a7d3-63e7d75936f8" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="a61f62db-0ac8-4520-b150-1b14e4d35187"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="8a8e30bc-73cf-4dd3-8528-8ba840598293" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="88d83f67-8437-4472-89c8-0d50e440c861" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="95703904-6d2e-4c0d-a916-78421afca048" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="a598d914-68cc-4400-b62c-45b405c8094c" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="6a7369cf-3b2c-4241-ab97-23ff8bfead4a"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="43af5d4a-44e2-4934-ac0a-2be5bc165655" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="ca6b6cbd-813d-471b-bc0d-a9c1def8d3e4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="81d3ab33-737b-477b-8235-dc9f2beeab66" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div></div></div></details><hr id="8b92cbaa-8275-4a92-a212-0bd68b8845f2"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">DIMANCHE</summary><div class="indented"><div id="fe7c5aaa-02b4-4fae-8958-dc828072b2c5" class="column-list"><div id="fcea6c7d-ff22-4ee6-8268-00fdba107382" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="af084455-387c-4e04-97e6-c0ae2a600697"><div style="font-size:1.5em"><span class="icon">🌅</span></div><div style="width:100%"><strong>Matin</strong></div></figure><ul id="f24e2172-022d-4210-b52f-60170ce29887" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="4507c4e6-2bc7-481e-b365-814b1f620d91" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="230caeb9-ff95-4433-99ff-b6c0cdcb77ff" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="869590ee-b254-446c-963c-ec57cc640f4b" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="8b7d42ce-dd49-40c7-b999-6e7af4eb75bb"><div style="font-size:1.5em"><span class="icon">🔅</span></div><div style="width:100%"><strong>Après-midi </strong></div></figure><ul id="01d00d03-2077-4887-8e7a-7666118ad084" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="2d7c0abc-8f39-4436-90cd-d2deee878bc1" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="f45c06ab-b7de-4079-8986-47b40bb132a7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div><div id="30e0ef8d-3538-4a57-9d0a-88fbe48d41f1" style="width:100%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="250754d3-a86d-4c38-891e-61c002d803d0"><div style="font-size:1.5em"><span class="icon">🌙</span></div><div style="width:100%"><strong>Soir</strong></div></figure><ul id="c6cdbd3b-7b5d-4b9f-a1ac-e65d7c8d5bab" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="21baca56-07a7-49be-a73e-50028c424eb8" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul><ul id="633a173c-b3d1-436f-ac06-73e6d998f399" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">...</span><div class="indented"></div></li></ul></div></div></div></details><hr id="ef91c07c-a363-4af3-9c3f-077976c568e8"/><h3 id="42cbfb90-650f-4270-98d2-7466536ce8ad" class="">— <mark class="highlight-default"><strong>Pour revenir à la page d&#x27;accueil</strong></mark></h3><figure id="10ab95ef-f9e6-80bf-af05-e4828ce58712" class="link-to-page"><a href="https://www.notion.so/BETTER-ME-10ab95eff9e680bfaf05e4828ce58712?pvs=21"><span class="icon">✊🏻</span>BETTER ME </a></figure><p id="becacd83-8925-4a2a-a29d-44c17e948b62" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

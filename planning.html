@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planning - My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .planning {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.planning h2 {
+    color: #0077cc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.planning p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.day-planning {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.time-section {
+    margin-bottom: 15px;
+}
+
+.time-section h4 {
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+.time-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.time-section li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.time-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.time-section li label {
+    flex: 1;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">My Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="planning.html" class="active">Planning</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="planning">
+        <div class="container">
+            <h2>Planning de la Journée</h2>
+            <p>Ici, vous pouvez organiser votre journée. Notez vos tâches et activités, puis cochez celles que vous avez accomplies en fin de journée.</p>
+            <p><em>Conseil : Faites votre planning la veille pour gagner du temps et être plus productif.</em></p>
+
+            <div class="day-planning">
+                <h3>Lundi</h3>
+                <div class="time-section">
+                    <h4>🌅 Matin</h4>
+                    <ul>
+                        <li><input type="checkbox"> Tâche du matin 1</li>
+                        <li><input type="checkbox"> Tâche du matin 2</li>
+                        <li><input type="checkbox"> Tâche du matin 3</li>
+                    </ul>
+                </div>
+                <div class="time-section">
+                    <h4>🔅 Après-midi</h4>
+                    <ul>
+                        <li><input type="checkbox"> Tâche de l'après-midi 1</li>
+                        <li><input type="checkbox"> Tâche de l'après-midi 2</li>
+                        <li><input type="checkbox"> Tâche de l'après-midi 3</li>
+                    </ul>
+                </div>
+                <div class="time-section">
+                    <h4>🌙 Soir</h4>
+                    <ul>
+                        <li><input type="checkbox"> Tâche du soir 1</li>
+                        <li><input type="checkbox"> Tâche du soir 2</li>
+                        <li><input type="checkbox"> Tâche du soir 3</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Repeat for other days of the week -->
+            <div class="day-planning">
+                <h3>Mardi</h3>
+                <!-- Similar structure as above for morning, afternoon, and evening -->
+            </div>
+            <!-- Add other days as needed -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
